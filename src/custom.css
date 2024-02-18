@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+.div-grad {
+background-color: rgba(255, 255, 255, 0.9);
+}
+
+.font-title {
+  font-family: 'Barlow Condensed', sans-serif;
+}
+
+.font-text {
+  font-family: 'Montserrat', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 2px;
+
+  background-color: transparent;
+}
+
+video {
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 70%;
+  width: 100vw;
+}
+.video-wrapper {
+
+
+  position: relative;
+  overflow: hidden;
+
+
+}
+.header{
+
+} 
+
+/* Marquee styles */
+.marquee {
+  --gap: 1rem;
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  user-select: none;
+  gap: var(--gap);
+}
+
+.marquee__content {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: space-around;
+  gap: var(--gap);
+  min-width: 100%;
+}
+
+/* Track */
+.mensagem {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #4CAF50;
+  color: white;
+  padding: 20px;
+  border-radius: 5px;
+  z-index: 9999; /* Coloca a mensagem acima de tudo */
+  text-align: center;
+}
+
+.mensagem p {
+  margin-bottom: 20px; /* Adiciona uma margem abaixo do parágrafo */
+}
+
+.mensagem button {
+  background-color: #fff;
+  color: #4CAF50;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  display: inline-block; /* Exibe o botão como um elemento de bloco */
+  width: calc(100% - 40px); /* Calcula a largura do botão para ser igual à largura da mensagem, com uma margem de 20px em cada lado */
+  margin-top: 20px; /* Adiciona uma margem acima do botão */
+}
+
+/* Estilos específicos para o botão de fechar */
+#fecharMensagem {
+  display: block; /* Certifica-se de que o botão de fechar seja exibido como um bloco */
+  margin: 10px auto 0; /* Define margens superior e inferior para centrar verticalmente e adiciona margem superior */
+}
+
+
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background:yellow;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background:yellow;
+}
+
+.scroll {
+  width: 60px;
+  position: absolute;
+
+  height: 60px;
+  border: 2px solid white;
+  border-radius: 50%;
+  position: relative;
+  animation: down 1.5s infinite;
+  -webkit-animation: down 1.5s infinite;
+}
+
+.scroll::before {
+  content: "";
+  position: absolute;
+  top: 15px;
+  left: 18px;
+  width: 18px;
+  height: 18px;
+  border-left: 2px solid white;
+  border-bottom: 2px solid white;
+  transform: rotate(-45deg);
+}
+
+@keyframes down {
+  0% {
+    transform: translate(0);
+  }
+
+  20% {
+    transform: translateY(15px);
+  }
+
+  40% {
+    transform: translate(0);
+  }
+}
+
+@-webkit-keyframes down {
+  0% {
+    transform: translate(0);
+  }
+
+  20% {
+    transform: translateY(15px);
+  }
+
+  40% {
+    transform: translate(0);
+  }
+}
+
+
+.fire-divider-bottom {
+ margin-top: 100px;
+  height: 100px;
+  width: 100%;
+  background-image: url("./imgs/fire-bottom.svg");
+
+  background-repeat: repeat-x ;
+}
