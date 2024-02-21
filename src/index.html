@@ -18,14 +18,20 @@
 </head>
 
 <body class=" bg-gray-950">
- 
+  <div id="bgblur" class="plano-de-fundo">
   
 
-  <div id="mensagem" class="mensagem">
-  O Último nivel do curso estará disponivel para compra a partir do dia 21/02/2024
-    <button onclick="abrirModal()" id="fecharMensagem">Fechar</button>
+  <div id="mensagem"  class="mensagem">
+
+      <video controls>
+        <source src="./imgs/video.mp4" type="video/mp4">
+      </video>
+   
+ <p class="my-5"> Acesso ao Último Nível do curso ImportGate estará disponível para compra a <b>partir de 22/02/2024</b>. Este nível oferece <b>acesso exclusivo a recursos premium</b>, como participação em um grupo no Telegram, compartilhamento de containers, lives exclusivas e muito mais.</p>
+    <a  href="https://go.hotmart.com/S91088222G?dp=1" class="bg-green-500 w-full group text-white text-lg font-semibold py-4 px-5" id="fecharMensagem">Seja um Importador de sucesso <i class=" group-hover:ml-4 duration-500 ml-1 fa-solid fa-arrow-right"></i></a>
+    <button onclick="abrirModal()" class="bg-red-500 group w-full text-white text-lg font-semibold py-4 px-5" id="fecharMensagem"><i class=" group-hover:mr-4 duration-500 mr-1 fa-solid fa-arrow-left"></i> Perder essa oportunidade </button>
   </div>
-  
+</div>
       <aside class="bg-no-repeat bg-cover bg-center reveal_top "
       style="background-image: url(./imgs/banner.jpg);">
       <div class="bg-gray-900/70  ">
@@ -301,12 +307,14 @@ Essa é a porta de entrada para o mundo da importação, tenha acesso a um e-boo
 
 
 const divMensagem = document.getElementById('mensagem');
-
+const bgblur = document.getElementById('bgblur')
 function abrirModal(){
   console.log(divMensagem.style.display)
   if(divMensagem.style.display == "none" || divMensagem.style.display == ""){
+    bgblur.style.display = "block"
     divMensagem.style.display = "block"
   }else{
+    bgblur.style.display = 'none'
     divMensagem.style.display = "none"
   }
 }

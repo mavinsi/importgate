@@ -62,36 +62,52 @@ video {
 }
 
 /* Track */
+/* Track */
+/* Track */
 .mensagem {
   display: none;
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: #4CAF50;
+  background-color: rgba(0, 0, 0, 0.5); /* Cor de fundo semi-transparente */
+  backdrop-filter: blur(100px); /* Aplica um desfoque ao fundo */
   color: white;
   padding: 20px;
+  width: 90%; /* Usando porcentagem para a largura da div */
+  max-width: 700px; /* Definindo uma largura máxima em pixels */
+  height: auto;
   border-radius: 5px;
-  z-index: 9999; /* Coloca a mensagem acima de tudo */
+  z-index: 9999;
   text-align: center;
 }
-
-.mensagem p {
-  margin-bottom: 20px; /* Adiciona uma margem abaixo do parágrafo */
+.plano-de-fundo {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Cor de fundo semi-transparente */
+  backdrop-filter: blur(5px); /* Aplica um desfoque ao fundo */
+  z-index: 9998; /* Coloca o plano de fundo atrás da mensagem */
+}
+/* Estilo para o vídeo dentro da div */
+.mensagem video {
+  width: 100%;
+  height: auto;
+  display: block;
+  position: relative;
+  z-index: 1;
 }
 
-.mensagem button {
-  background-color: #fff;
-  color: #4CAF50;
-  border: none;
-  padding: 10px 20px;
-  cursor: pointer;
-  border-radius: 5px;
-  display: inline-block; /* Exibe o botão como um elemento de bloco */
-  width: calc(100% - 40px); /* Calcula a largura do botão para ser igual à largura da mensagem, com uma margem de 20px em cada lado */
-  margin-top: 20px; /* Adiciona uma margem acima do botão */
+/* Media query para dispositivos com largura de tela até 600 pixels */
+@media screen and (max-width: 600px) {
+  .mensagem {
+    width: 90%; /* Ajustando a largura para telas menores */
+    max-width: none; /* Removendo a largura máxima */
+  }
 }
-
 /* Estilos específicos para o botão de fechar */
 #fecharMensagem {
   display: block; /* Certifica-se de que o botão de fechar seja exibido como um bloco */
